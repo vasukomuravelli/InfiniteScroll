@@ -60,7 +60,8 @@ const [query, setQuery] = React.useState("random");
         }
     }
     const handleSearch = () => {
-        setQuery(document.getElementById("searchbar").value);
+        document.getElementById("searchbar").value.length > 0 ?
+        setQuery(document.getElementById("searchbar").value) : setQuery("random");
     }
   return (
     <div className="container">
